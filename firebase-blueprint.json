@@ -1,0 +1,106 @@
+{
+  "entities": {
+    "Student": {
+      "title": "Student",
+      "description": "Dhaka University student record for academic verification.",
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Unique verification token printed on card or in QR URL"
+        },
+        "name": {
+          "type": "string",
+          "description": "Student full English name"
+        },
+        "nameBn": {
+          "type": "string",
+          "description": "Student Bengali name"
+        },
+        "regNo": {
+          "type": "string",
+          "description": "Registration number"
+        },
+        "photoUrl": {
+          "type": "string",
+          "description": "Student profile photo URL or base64 image data"
+        },
+        "status": {
+          "type": "string",
+          "description": "Academic studentship status"
+        },
+        "statusBn": {
+          "type": "string",
+          "description": "Bengali status"
+        },
+        "lastUpdated": {
+          "type": "string",
+          "description": "Last updated date string"
+        },
+        "lastUpdatedBn": {
+          "type": "string",
+          "description": "Bengali last updated date"
+        },
+        "subject": {
+          "type": "string",
+          "description": "Academic subject"
+        },
+        "subjectBn": {
+          "type": "string",
+          "description": "Bengali subject"
+        },
+        "faculty": {
+          "type": "string",
+          "description": "Academic faculty"
+        },
+        "facultyBn": {
+          "type": "string",
+          "description": "Bengali faculty"
+        },
+        "degree": {
+          "type": "string",
+          "description": "Degree title"
+        },
+        "degreeBn": {
+          "type": "string",
+          "description": "Bengali degree"
+        },
+        "session": {
+          "type": "string",
+          "description": "Academic session"
+        },
+        "hall": {
+          "type": "string",
+          "description": "Residential hall"
+        },
+        "hallBn": {
+          "type": "string",
+          "description": "Bengali hall"
+        },
+        "duidCode": {
+          "type": "string",
+          "description": "DUID code"
+        },
+        "admissionRoll": {
+          "type": "string",
+          "description": "Admission roll"
+        },
+        "issueDate": {
+          "type": "string",
+          "description": "Card issuance date"
+        },
+        "nationalIdMasked": {
+          "type": "string",
+          "description": "Masked national ID"
+        }
+      },
+      "required": ["id", "name", "regNo", "photoUrl", "status", "lastUpdated"]
+    }
+  },
+  "firestore": {
+    "/students/{studentId}": {
+      "schema": "Student",
+      "description": "Public academic studentship verification records accessible by token or registration number."
+    }
+  }
+}

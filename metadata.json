@@ -1,0 +1,6 @@
+{
+  "name": "Academic E-Service Management - University of Dhaka",
+  "description": "Dhaka University studentship verification portal replica featuring real-time token lookups, student profile card, and academic credentials verification.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
